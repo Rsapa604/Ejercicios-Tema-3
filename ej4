@@ -22,4 +22,11 @@ print("\nOrdenadas por longitud:")
 for n in sorted(naves, key=lambda n: n.longitud, reverse=True):
     print(n.nombre)
 
+print("\nTop 5 con más pasajeros:")
+for n in sorted(naves, key=lambda n: n.pasajeros, reverse=True)[:5]:
+    print(n.nombre)
+
+print("\nNave con más tripulación:", max(naves, key=lambda n: n.tripulantes).nombre)
+
+
 
