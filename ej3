@@ -14,4 +14,13 @@ class Polinomio:
     def existe_termino(self, exp):
         return exp in self.coef
 
+p1 = Polinomio({3: 2, 2: 5, 0: -7})
+p2 = Polinomio({2: 3, 1: 1})
+
+print(p1.mostrar())
+print(p2.mostrar())
+print(p1.restar(p2).mostrar())
+p1.eliminar_termino(2)
+print(p1.mostrar())
+print(p1.existe_termino(3))
 
