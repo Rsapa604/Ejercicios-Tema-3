@@ -4,3 +4,14 @@ class Polinomio:
 
     def mostrar(self):
         return " + ".join(f"{c}x^{e}" if e else f"{c}" for e, c in sorted(self.coef.items()) if c)
+    
+    def restar(self, otro):
+        return Polinomio({e: self.coef.get(e, 0) - otro.coef.get(e, 0) for e in set(self.coef) | set(otro.coef)})
+
+    def eliminar_termino(self, exp):
+        self.coef = {e: c for e, c in self.coef.items() if e != exp}
+
+    def existe_termino(self, exp):
+        return exp in self.coef
+
+
