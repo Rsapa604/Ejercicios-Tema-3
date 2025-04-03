@@ -1,5 +1,5 @@
 class PiramideHanoi:
-    def _init_(self, num_piedras):
+    def __init__(self, num_piedras):
         self.num_piedras = num_piedras
 
     def mover(self, n, origen, destino, auxiliar):

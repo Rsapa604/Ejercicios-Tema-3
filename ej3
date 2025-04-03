@@ -1,5 +1,5 @@
 class Polinomio:
-    def _init_(self, coef):
+    def __init__(self, coef):
         self.coef = coef
 
     def mostrar(self):

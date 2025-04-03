@@ -1,5 +1,5 @@
 class MatrizMagica:
-    def _init_(self, matriz):
+    def __init__(self, matriz):
         self.matriz = matriz
 
     def determinante_recursivo(self, matriz=None):
