@@ -28,5 +28,6 @@ for n in sorted(naves, key=lambda n: n.pasajeros, reverse=True)[:5]:
 
 print("\nNave con más tripulación:", max(naves, key=lambda n: n.tripulantes).nombre)
 
-
+print("\nNave más pequeña:", min(naves, key=lambda n: n.longitud).nombre)
+print("Nave más grande:", max(naves, key=lambda n: n.longitud).nombre)
 
