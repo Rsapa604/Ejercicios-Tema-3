@@ -14,3 +14,12 @@ naves = [
     Nave("Nébula X", 200, 10, 60)
 ]
 
+print("\nOrdenadas por nombre:")
+for nave in sorted(naves, key=lambda n: n.nombre):
+    print(n.nombre)
+
+print("\nOrdenadas por longitud:")
+for n in sorted(naves, key=lambda n: n.longitud, reverse=True):
+    print(n.nombre)
+
+
