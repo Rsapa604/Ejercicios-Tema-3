@@ -1,0 +1,12 @@
+class MatrizMagica:
+    def _init_(self, matriz):
+        self.matriz = matriz
+
+    def determinante_recursivo(self, matriz=None):
+        if matriz is None:
+            matriz = self.matriz
+
+        if len(matriz) == 2:
+            return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
+
+        return sum((-1) ** i * matriz[0][i] * self.determinante_recursivo([fila[:i] + fila[i+1:] for fila in matriz[1:]]) for i in range(3))

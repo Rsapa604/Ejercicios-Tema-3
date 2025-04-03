@@ -9,3 +9,10 @@ class PiramideHanoi:
             self.mover(n - 1, origen, auxiliar, destino)
             print(f"Mueve la piedra {n} de {origen} a {destino}")
             self.mover(n - 1, auxiliar, destino, origen)
+
+    def resolver(self):
+        self.mover(self.num_piedras, "Columna A", "Columna C", "Columna B")
+
+juego = PiramideHanoi(74)
+juego.resolver()
+
