@@ -1,3 +1,11 @@
 class PiramideHanoi:
     def _init_(self, num_piedras):
         self.num_piedras = num_piedras
+
+    def mover(self, n, origen, destino, auxiliar):
+        if n == 1:
+            print(f"Mueve la piedra {n} de {origen} a {destino}")
+        else:
+            self.mover(n - 1, origen, auxiliar, destino)
+            print(f"Mueve la piedra {n} de {origen} a {destino}")
+            self.mover(n - 1, auxiliar, destino, origen)
