@@ -1,0 +1,3 @@
+class PiramideHanoi:
+    def _init_(self, num_piedras):
+        self.num_piedras = num_piedras
