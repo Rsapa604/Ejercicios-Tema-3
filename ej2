@@ -17,4 +17,14 @@ class MatrizMagica:
         g, h, i = self.matriz[2]
         return (a * e * i + b * f * g + c * d * h) - (c * e * g + a * f * h + b * d * i)
 
+matriz = [
+    [2, 3, 1],
+    [4, 5, 6],
+    [7, 3, 5]
+]
+
+misterio = MatrizMagica(matriz)
+print("Determinante (recursivo):", misterio.determinante_recursivo())
+print("Determinante (iterativo):", misterio.determinante_iterativo())
+
 

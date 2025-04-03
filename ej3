@@ -1,0 +1,6 @@
+class Polinomio:
+    def _init_(self, coef):
+        self.coef = coef
+
+    def mostrar(self):
+        return " + ".join(f"{c}x^{e}" if e else f"{c}" for e, c in sorted(self.coef.items()) if c)
